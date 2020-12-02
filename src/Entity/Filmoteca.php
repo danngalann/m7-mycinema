@@ -20,11 +20,6 @@ class Filmoteca
     /**
      * @ORM\Column(type="string", length=30)
      */
-    private $titol;
-
-    /**
-     * @ORM\Column(type="string", length=30)
-     */
     private $title;
 
     /**
@@ -40,18 +35,6 @@ class Filmoteca
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getTitol(): ?string
-    {
-        return $this->titol;
-    }
-
-    public function setTitol(string $titol): self
-    {
-        $this->titol = $titol;
-
-        return $this;
     }
 
     public function getTitle(): ?string
