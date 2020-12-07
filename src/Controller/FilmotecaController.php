@@ -59,7 +59,7 @@ class FilmotecaController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="filmoteca_edit", methods={"GET","POST"})
+     * @Route("/edit/{id}", name="filmoteca_edit", methods={"GET","POST"}, priority="1")
      */
     public function edit(Request $request, Filmoteca $filmoteca): Response
     {
@@ -79,7 +79,7 @@ class FilmotecaController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="filmoteca_delete", methods={"DELETE"})
+     * @Route("/delete/{id}", name="filmoteca_delete", methods={"DELETE"}, priority="1")
      */
     public function delete(Request $request, Filmoteca $filmoteca): Response
     {
