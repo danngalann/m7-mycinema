@@ -6,8 +6,9 @@
     <h1>Editar película</h1>
 
     {{ include('filmoteca/_form.html.twig', {'button_label': 'Actualizar'}) }}
+    {{ include('filmoteca/_delete_form.html.twig') }}
 
     <a href="{{ path('filmoteca_index') }}">Volver a la lista</a>
 
-    {{ include('filmoteca/_delete_form.html.twig') }}
+
 {% endblock %}
