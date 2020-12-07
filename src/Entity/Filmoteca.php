@@ -28,7 +28,7 @@ class Filmoteca
     private $year;
 
     /**
-     * @ORM\Column(type="string", length=200, nullable=true)
+     * @ORM\Column(type="string", length=1000, nullable=true)
      */
     private $sinopsis;
 
