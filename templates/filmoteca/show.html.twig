@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Filmoteca{% endblock %}
+{% block title %}Película{% endblock %}
 
 {% block body %}
-    <h1>Filmoteca</h1>
+    <h1>Película</h1>
 
     <table class="table">
         <tbody>
@@ -12,11 +12,11 @@
                 <td>{{ filmoteca.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Título</th>
                 <td>{{ filmoteca.title }}</td>
             </tr>
             <tr>
-                <th>Year</th>
+                <th>Año</th>
                 <td>{{ filmoteca.year }}</td>
             </tr>
             <tr>
@@ -29,7 +29,7 @@
     <a href="{{ path('filmoteca_index') }}">Volver a la lista</a>
 
     {% if is_granted("ROLE_ADMIN") %}
-    <a href="{{ path('filmoteca_edit', {'id': filmoteca.id}) }}">edit</a>
+    <a href="{{ path('filmoteca_edit', {'id': filmoteca.id}) }}">Editar</a>
     {% endif %}
 
     {% if is_granted("ROLE_ADMIN") %}

@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Film index{% endblock %}
+{% block title %}Filmoteca{% endblock %}
 
 {% block body %}
-    <h1>Film index</h1>
+    <h1>Filmoteca</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Title</th>
-                <th>Year</th>
+                <th>Título</th>
+                <th>Año</th>
                 <th>Sinopsis</th>
-                <th>actions</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -23,21 +23,21 @@
                 <td>{{ filmoteca.year }}</td>
                 <td>{{ filmoteca.sinopsis }}</td>
                 <td>
-                    <a href="{{ path('filmoteca_show', {'id': filmoteca.id}) }}">show</a>
+                    <a href="{{ path('filmoteca_show', {'id': filmoteca.id}) }}">Ver</a>
                     {% if is_granted("ROLE_ADMIN") %}
-                    <a href="{{ path('filmoteca_edit', {'id': filmoteca.id}) }}">edit</a>
+                    <a href="{{ path('filmoteca_edit', {'id': filmoteca.id}) }}">Editar</a>
                     {% endif %}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">No se han encontrado películas</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
     {% if is_granted("ROLE_ADMIN") %}
-    <a href="{{ path('filmoteca_new') }}">Create new</a>
+    <a href="{{ path('filmoteca_new') }}">Crear</a>
     {% endif %}
 {% endblock %}
