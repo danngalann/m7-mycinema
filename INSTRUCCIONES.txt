@@ -1,0 +1,20 @@
+COPIAR TODO AL XAMPP htdocs
+PONER DOCUMENTROOT A public/
+
+La base de datos la puedes cargar con el my_cinema.sql o con
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+
+Si te da algún problema ejecuta
+composer install
+
+Se requiere php 7.4
+Se han añadido varias películas de prueba.
+Las credenciales del usuario admin son
+admin/admin1234
+
+Si tienes problemas ejecutando el proyecto, abre la demo en
+https://m7-mycinema.000webhostapp.com
+
+Notar que no hay logout implementado; borra las cookies o usa una ventana de incógnito.
