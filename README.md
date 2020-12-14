@@ -7,6 +7,7 @@ To run this app locally, you'll need to go to your XAMPP or WAMP web directory a
 git clone https://github.com/danngalann/m7-mycinema
 cd m7-mycinema
 composer install
+php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
